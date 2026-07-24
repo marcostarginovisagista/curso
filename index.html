@@ -59,17 +59,17 @@ strong{color:var(--dh)}
 .card{background:var(--card);border:1px solid var(--line);border-radius:10px}
 
 /* HERO */
-.hero .grid{display:grid;grid-template-columns:1.05fr .92fr;gap:clamp(28px,5vw,56px);align-items:center;padding:clamp(74px,9vw,108px) 0 clamp(54px,7vw,84px)}
+.hero .grid{display:grid;grid-template-columns:1.05fr .92fr;gap:clamp(28px,5vw,56px);align-items:center;padding:clamp(74px,9vw,108px) 22px clamp(54px,7vw,84px)}
 .hbadge{display:inline-block;font-family:var(--sans);font-weight:600;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-soft);border:1px solid rgba(221,187,126,.35);border-radius:4px;padding:8px 15px;margin-bottom:24px}
 .hero h1{font-size:clamp(2.05rem,5.2vw,3.2rem)}
 .hero h1 em{font-style:italic;color:var(--brass-soft)}
 .hero .sub{font-size:clamp(1.02rem,2.5vw,1.2rem);color:var(--db);margin:20px 0 30px;max-width:36ch}
 .hphoto{border-radius:12px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 34px 80px rgba(0,0,0,.6);border:1px solid rgba(221,187,126,.22)}
 .hphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
-.micro{display:flex;margin-top:28px;font-family:var(--sans);font-size:.82rem;color:var(--dmut)}
-.micro span{padding:0 18px;border-left:1px solid var(--line)}
-.micro span:first-child{padding-left:0;border-left:0}
-.micro b{color:var(--brass-soft);font-weight:600;font-size:1rem}
+.micro{list-style:none;margin-top:24px;font-family:var(--sans);font-size:.88rem;color:var(--db);display:flex;flex-direction:column;gap:9px}
+.micro li{display:flex;align-items:flex-start;gap:10px;line-height:1.35}
+.micro li::before{content:"\25C6";color:var(--brass);font-size:.6rem;line-height:1.7;flex:none}
+.micro b{color:var(--brass-soft);font-weight:600}
 
 /* marquee */
 .marq{background:var(--blood);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:13px 0}
@@ -240,8 +240,16 @@ footer b{color:#b6a894}
 
 @media(max-width:900px){.probs,.feat{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:860px){
-  .hero .grid{grid-template-columns:1fr}
-  .hphoto{order:-1;max-height:440px;aspect-ratio:auto}
+  /* ---- HERO MOBILE: tudo na primeira tela ---- */
+  .wrap{padding:0 26px}
+  .hero .grid{grid-template-columns:1fr;gap:20px;padding:16px 26px 30px}
+  .hphoto{order:-1;aspect-ratio:auto;height:29vh;min-height:180px;max-height:248px;border-radius:10px}
+  .hphoto img{object-position:50% 24%}
+  .hbadge{font-size:.58rem;letter-spacing:.14em;padding:6px 11px;margin-bottom:14px}
+  .hero h1{font-size:1.68rem;line-height:1.16}
+  .hero .sub{font-size:.94rem;line-height:1.5;margin:12px 0 20px;max-width:none}
+  .btn.big{font-size:.82rem;letter-spacing:.02em;padding:13px 14px;width:100%;border-radius:9px;line-height:1.3}
+  .micro{margin-top:18px;font-size:.82rem;gap:7px}
   .mgrid,.ebook-card,.who,.alist,.pq,.cmp{grid-template-columns:1fr}
   .guar{grid-template-columns:1fr;justify-items:center;text-align:center}
   .bio{grid-template-columns:1fr}.bio .photo{max-width:320px;margin:0 auto}
@@ -258,8 +266,8 @@ footer b{color:#b6a894}
       <span class="hbadge">Visagismo Masculino · Método Marcos Targino</span>
       <h1>Pare de cortar cabelo. Comece a <em>esculpir identidades.</em></h1>
       <p class="sub">O método de visagismo que transforma o barbeiro técnico em <strong>consultor de imagem</strong> — e faz o cliente pagar pelo valor, não pelo preço.</p>
-      <a href="#oferta" class="btn big">QUERO ME TORNAR UM BARBEIRO-VISAGISTA<span class="s">Acesso imediato · 8 módulos + ebooks + IA</span></a>
-      <div class="micro"><span><b>8</b> módulos</span><span><b>8</b> ebooks</span><span><b>IA</b> 24h</span></div>
+      <a href="#oferta" class="btn big">QUERO ME TORNAR UM BARBEIRO-VISAGISTA</a>
+      <ul class="micro"><li><b>8 módulos</b> de conteúdo estratégico</li><li><b>8 ebooks</b> de materiais complementares</li><li><b>Inteligência artificial 24h</b> para te ajudar</li></ul>
     </div>
     <div class="hphoto"><img src="img/hero.webp" alt="Marcos Targino — visagismo masculino" width="900" height="1350" fetchpriority="high" decoding="async"></div>
   </div>
