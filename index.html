@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Cadeira da Transformação — Visagismo para Barbeiros | Marcos Targino</title>
+<meta name="description" content="O método de visagismo que transforma o barbeiro técnico em consultor de imagem. 8 módulos em vídeo + ebooks + IA de suporte.">
+<link rel="preload" as="image" href="img/hero.webp" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blk:#0C0706; --blood:#2B0707; --blood2:#1E0606; --card:#17100D; --line:rgba(222,187,126,.14);
+  --dh:#F5ECDD; --db:#C6B6A2; --dmut:#9A8B7B;
+  --ox:#7A1F16; --brass:#C79A5A; --brass-soft:#DDBB7E;
+  --green:#1FBE80; --green-deep:#0C8150; --red:#C0554A;
+  --paper:#F2EADB; --ink:#221B17;
+  --serif:'Lora',Georgia,serif; --sans:'Poppins',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--db);background:var(--blk);line-height:1.62;-webkit-font-smoothing:antialiased;font-size:16px}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.14;letter-spacing:-.01em;color:var(--dh)}
+strong{color:var(--dh)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px;position:relative;z-index:2}
+.sec{padding:clamp(52px,8vw,104px) 0}
+.kick{font-family:var(--sans);font-weight:600;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brass)}
+.center{text-align:center}
+.lead{font-size:clamp(1rem,2.3vw,1.16rem);color:var(--db)}
+.rule{width:56px;height:3px;background:var(--brass);border:0;margin:16px 0;border-radius:2px}
+.center .rule{margin:16px auto}
+.blk{background:radial-gradient(125% 130% at 25% 12%,#230a09 0%,#100605 52%,#0a0504 100%);background-size:160% 160%;animation:drift 26s ease-in-out infinite alternate}
+.blood{background:radial-gradient(125% 130% at 68% 16%,#3d0d0b 0%,#250808 50%,#180606 100%);background-size:165% 165%;animation:drift 22s ease-in-out infinite alternate}
+@keyframes drift{0%{background-position:0% 0%}100%{background-position:100% 100%}}
+
+/* smooth glow (hero/final) */
+.glow{background:radial-gradient(135% 105% at 50% -18%,#4d0e0b 0%,#260707 42%,#0b0504 100%);position:relative;overflow:hidden}
+.glow::before{content:"";position:absolute;left:50%;top:-30%;width:120%;height:90%;transform:translateX(-50%);z-index:0;
+  background:radial-gradient(closest-side,rgba(140,26,20,.5),transparent 72%);filter:blur(30px);animation:pulse 9s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.55}50%{opacity:.95}}
+@media(prefers-reduced-motion:reduce){.glow::before,.btn::after,.track,.blk,.blood{animation:none}}
+
+/* GREEN buttons */
+.btn{display:inline-block;font-family:var(--sans);font-weight:600;font-size:.98rem;letter-spacing:.045em;color:#fff;
+  background:linear-gradient(150deg,#27C68B 0%,#12A26B 48%,#0A7A4D 100%);padding:16px 34px;border-radius:11px;text-decoration:none;transition:.25s ease;
+  box-shadow:0 6px 18px rgba(9,105,66,.30),0 1px 0 rgba(255,255,255,.12) inset,0 -2px 7px rgba(0,0,0,.20) inset;border:1px solid rgba(255,255,255,.16);position:relative;overflow:hidden;cursor:pointer;text-align:center}
+.btn::after{content:"";position:absolute;top:0;left:-70%;width:38%;height:100%;background:linear-gradient(120deg,transparent,rgba(255,255,255,.28),transparent);transform:skewX(-20deg);animation:sheen 6s ease-in-out infinite}
+@keyframes sheen{0%,55%{left:-70%}100%{left:140%}}
+.btn:hover{filter:brightness(1.06);transform:translateY(-1px);box-shadow:0 10px 26px rgba(9,105,66,.42),0 1px 0 rgba(255,255,255,.14) inset}
+.btn.big{font-size:1.06rem;padding:19px 42px;border-radius:12px}
+.btn .s{display:block;font-weight:400;font-size:.72rem;letter-spacing:.05em;opacity:.9;margin-top:3px}
+
+/* placeholder */
+.ph{border:1.6px dashed var(--brass);background:rgba(199,154,90,.05);border-radius:8px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--brass-soft);font-family:var(--sans);font-size:.74rem;font-weight:500;letter-spacing:.05em;text-transform:uppercase;padding:20px;line-height:1.5}
+
+/* card base */
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px}
+
+/* HERO */
+.hero .grid{display:grid;grid-template-columns:1.05fr .92fr;gap:clamp(28px,5vw,56px);align-items:center;padding:clamp(74px,9vw,108px) 0 clamp(54px,7vw,84px)}
+.hbadge{display:inline-block;font-family:var(--sans);font-weight:600;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--brass-soft);border:1px solid rgba(221,187,126,.35);border-radius:4px;padding:8px 15px;margin-bottom:24px}
+.hero h1{font-size:clamp(2.05rem,5.2vw,3.2rem)}
+.hero h1 em{font-style:italic;color:var(--brass-soft)}
+.hero .sub{font-size:clamp(1.02rem,2.5vw,1.2rem);color:var(--db);margin:20px 0 30px;max-width:36ch}
+.hphoto{border-radius:12px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 34px 80px rgba(0,0,0,.6);border:1px solid rgba(221,187,126,.22)}
+.hphoto img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.micro{display:flex;margin-top:28px;font-family:var(--sans);font-size:.82rem;color:var(--dmut)}
+.micro span{padding:0 18px;border-left:1px solid var(--line)}
+.micro span:first-child{padding-left:0;border-left:0}
+.micro b{color:var(--brass-soft);font-weight:600;font-size:1rem}
+
+/* marquee */
+.marq{background:var(--blood);border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:13px 0}
+.track{display:inline-block;animation:scroll 26s linear infinite;font-family:var(--sans);font-weight:600;font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;color:var(--brass-soft)}
+.track span{padding-left:26px}
+.track span::after{content:"◆";color:var(--brass);margin-left:26px;font-size:.55rem;vertical-align:middle}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* pain band */
+.band{text-align:center}
+.band p{font-family:var(--serif);font-style:italic;font-size:clamp(1.2rem,3vw,1.7rem);line-height:1.4;max-width:26ch;margin:0 auto;color:var(--dh)}
+.band p b{font-style:normal;color:var(--brass-soft)}
+
+/* section head */
+.shead{max-width:660px}.shead.center{margin:0 auto}
+.shead h2{font-size:clamp(1.65rem,4vw,2.35rem);margin-top:8px}
+.shead p{margin-top:14px}
+
+/* pain quotes */
+.pq{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.pqi{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--ox);border-radius:8px;padding:20px 22px;font-family:var(--serif);font-style:italic;font-size:1rem;color:var(--db)}
+.pqi b{font-style:normal;color:var(--brass-soft)}
+.pq-note{text-align:center;margin-top:26px;font-weight:500;color:var(--brass-soft)}
+
+/* numbered problems */
+.probs{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:42px}
+.prob{background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:10px;padding:24px 20px}
+.prob .n{font-family:var(--serif);font-size:2rem;color:var(--brass-soft);line-height:1;margin-bottom:10px}
+.prob p{font-size:.9rem;color:var(--db)}
+
+/* access */
+.feat{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:40px}
+.fcard{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px 20px}
+.fcard .ic{width:42px;height:42px;border-radius:9px;background:var(--ox);color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:1.2rem;margin-bottom:14px}
+.fcard h3{font-family:var(--sans);font-weight:600;font-size:1rem;color:var(--dh);margin-bottom:6px}
+.fcard p{font-size:.9rem;color:var(--db)}
+.mockup{margin-top:40px}.mockup .ph{aspect-ratio:16/9}
+.platform{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:22px;font-family:var(--sans);font-size:.85rem;color:var(--dmut)}
+.platform b{color:var(--brass-soft);font-weight:600}
+
+/* modules */
+.mgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:40px}
+.mod{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.mod .cover{aspect-ratio:16/9;border-radius:0;border:0;border-bottom:1px solid var(--line);margin:0}
+.mod .body{padding:20px 22px 24px}
+.mod .num{font-family:var(--sans);font-weight:700;font-size:.72rem;letter-spacing:.14em;color:var(--brass);text-transform:uppercase}
+.mod h3{font-size:1.22rem;color:var(--dh);margin:4px 0 8px}
+.mod p{font-size:.92rem;color:var(--db)}
+.ebook-card{background:var(--blood2);border:1px solid var(--line);border-radius:14px;margin-top:26px;display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+.ebook-card .txt{padding:clamp(28px,4vw,44px)}
+.ebook-card h3{font-size:clamp(1.4rem,3vw,1.95rem);margin:10px 0 12px}
+.ebook-card p{color:var(--db);font-size:.96rem;margin-bottom:10px}
+.ebook-card .mk{display:flex;align-items:center;justify-content:center;padding:26px}
+.ebook-card .mk .ph{aspect-ratio:4/3;width:100%}
+
+/* who */
+.who{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
+.wcard{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--ox);border-radius:8px;padding:26px 24px}
+.wcard .tag{font-family:var(--sans);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--brass);font-weight:600;margin-bottom:10px}
+.wcard h3{font-family:var(--sans);font-weight:600;font-size:1.05rem;color:var(--dh);margin-bottom:4px}
+.wcard p{font-size:.92rem;color:var(--db)}
+.noexp{margin-top:26px;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:8px;padding:20px 24px;font-size:.98rem;text-align:center;color:var(--db)}
+.noexp b{color:var(--brass-soft)}
+
+/* apply */
+.alist{display:grid;grid-template-columns:1fr 1fr;gap:14px 30px;margin-top:36px}
+.alist li{list-style:none;display:flex;gap:12px;font-size:.98rem;color:var(--db);line-height:1.5}
+.alist .ck{color:var(--green);font-weight:700;flex:none;font-size:1.05rem}
+
+/* cost of inaction */
+.coi{text-align:center}.coi .stackp{max-width:640px;margin:24px auto 0}
+.coi .stackp p{font-family:var(--serif);font-style:italic;font-size:clamp(1.05rem,2.6vw,1.35rem);color:var(--dh);margin-bottom:12px;line-height:1.4}
+.coi .stackp p b{font-style:normal;color:var(--brass-soft)}
+
+/* payoff */
+.payoff .box{background:rgba(255,255,255,.03);border:1px solid var(--line);border-left:4px solid var(--green);border-radius:10px;padding:clamp(26px,4vw,40px);margin-top:16px;max-width:760px}
+.payoff .big-num{font-family:var(--serif);font-size:clamp(2rem,6vw,3rem);color:var(--green);font-weight:600;line-height:1}
+.payoff p{margin-top:12px;font-size:1rem;color:var(--db)}
+
+/* value stack */
+.vt{max-width:720px;margin:34px auto 0;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.vt .row{display:flex;justify-content:space-between;gap:16px;padding:16px 22px;border-bottom:1px solid var(--line);font-size:.96rem}
+.vt .row span:first-child{color:var(--db)}
+.vt .row span:last-child{font-family:var(--sans);font-weight:600;color:var(--brass-soft);white-space:nowrap}
+.vt .row.total{background:var(--blood)}.vt .row.total span{font-weight:700;color:var(--dh);font-size:1.02rem}
+.punch{text-align:center;max-width:620px;margin:26px auto 0;font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--brass-soft)}
+
+/* comparison */
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:40px}
+.cc{border-radius:12px;padding:28px 26px;background:var(--card);border:1px solid var(--line)}
+.cc.with{border-color:rgba(31,190,128,.5);box-shadow:0 12px 34px rgba(12,129,80,.14)}
+.cc h3{font-family:var(--sans);font-weight:600;font-size:1.05rem;margin-bottom:16px}
+.cc.with h3{color:var(--green)}.cc.without h3{color:var(--dmut)}
+.cc li{list-style:none;display:flex;gap:10px;padding:8px 0;font-size:.94rem;color:var(--db);border-bottom:1px dashed var(--line)}
+.cc li:last-child{border-bottom:0}
+.cc .mk{flex:none;font-weight:700}.cc.with .mk{color:var(--green)}.cc.without .mk{color:var(--red)}
+.cc .hl{font-weight:700;color:var(--dh)}
+
+/* offer (light card pop) */
+.ocard{max-width:640px;margin:0 auto;background:var(--paper);color:var(--ink);border-radius:16px;overflow:hidden;box-shadow:0 34px 90px rgba(0,0,0,.6);border:1px solid rgba(221,187,126,.3)}
+.ocard .top{background:var(--ox);color:#fff;text-align:center;padding:16px;font-family:var(--sans);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem}
+.ocard .in{padding:clamp(28px,5vw,46px);text-align:center}
+.ocard .incl{text-align:left;max-width:440px;margin:0 auto 26px}
+.ocard .incl li{list-style:none;display:flex;gap:10px;padding:8px 0;font-size:.95rem;color:#3c332b;border-bottom:1px dashed #d9cbb3}
+.ocard .incl li:last-child{border-bottom:0}
+.ocard .incl .ck{color:var(--green-deep);font-weight:700}
+.price .from{font-family:var(--sans);color:#8a7c6d;text-decoration:line-through;font-size:1.05rem}
+.price .now{font-family:var(--serif);font-size:clamp(2.7rem,8vw,3.7rem);color:var(--ox);font-weight:600;line-height:1;margin:4px 0}
+.price .now small{font-size:1.1rem;vertical-align:top}
+.price .inst{font-family:var(--sans);color:#5a4e42;font-size:.95rem;margin-bottom:24px}
+.trust{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:20px;font-family:var(--sans);font-size:.8rem;color:#7a6c5d}
+
+/* guarantee */
+.guar{display:grid;grid-template-columns:130px 1fr;gap:28px;align-items:center;max-width:760px;margin:0 auto;background:rgba(255,255,255,.03);border:1px solid var(--line);border-radius:12px;padding:clamp(24px,4vw,38px)}
+.seal{width:130px;height:130px;border-radius:50%;border:2px solid var(--green);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--green);font-family:var(--serif);background:rgba(31,190,128,.08)}
+.seal b{font-size:2.1rem;line-height:1}.seal span{font-family:var(--sans);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;margin-top:4px;color:var(--green)}
+.guar h3{font-size:1.4rem;color:var(--dh);margin-bottom:8px}.guar p{font-size:.96rem;color:var(--db)}
+
+/* bio */
+.bio{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,52px);align-items:center}
+.bio .photo{border-radius:12px;overflow:hidden;aspect-ratio:4/5;border:1px solid rgba(221,187,126,.28);box-shadow:0 28px 70px rgba(0,0,0,.55)}
+.bio .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+.bio h2{font-size:clamp(1.5rem,3.6vw,2.1rem)}
+.bio p{color:var(--db);margin-top:14px;font-size:1rem}
+.bio .q{font-family:var(--serif);font-style:italic;font-size:1.15rem;color:var(--brass-soft);margin-top:20px;border-left:2px solid var(--brass);padding-left:16px}
+
+/* access time */
+.acc{text-align:center}
+.acc .pill{display:inline-flex;align-items:center;gap:10px;background:rgba(199,154,90,.14);color:var(--brass-soft);border:1px solid var(--line);border-radius:40px;padding:13px 26px;font-family:var(--sans);font-weight:600;font-size:1rem;margin-top:12px}
+
+/* faq */
+.faq{max-width:780px;margin:34px auto 0}
+details{background:var(--card);border:1px solid var(--line);border-radius:8px;margin-bottom:12px;overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:18px 22px;font-family:var(--sans);font-weight:600;font-size:1rem;color:var(--dh);display:flex;justify-content:space-between;gap:14px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-weight:400;font-size:1.5rem;color:var(--green);transition:.2s}
+details[open] summary::after{transform:rotate(45deg)}
+details .a{padding:0 22px 20px;font-size:.95rem;color:var(--db)}
+
+/* final */
+.final{text-align:center}
+.final h2{font-size:clamp(1.7rem,4.5vw,2.6rem)}
+.final p{max-width:52ch;margin:16px auto 30px;color:var(--db)}
+.final .sig{font-family:var(--serif);font-style:italic;color:var(--brass-soft);margin-top:26px;font-size:1.05rem}
+
+/* seções claras — respiros estratégicos */
+.light{background:#F1E9DA;color:#4a3f37}
+.light h1,.light h2,.light h3,.light .shead h2{color:#4A211D}
+.light .kick{color:#9a6a2a}
+.light .lead,.light p{color:#4a3f37}
+.light .rule{background:#b98d4a}
+.light strong,.light em{color:#4A211D}
+.light .wcard{background:#FBF6EC;border:1px solid #DDCDB0;border-top:3px solid #7A1F16}
+.light .wcard h3{color:#4A211D}.light .wcard p{color:#4a3f37}.light .wcard .tag{color:#9a6a2a}
+.light .noexp{background:#EFE4D3;border:1px solid #DDCDB0;color:#4a3f37}.light .noexp b{color:#7A1F16}
+.light .payoff .box,.light .box{background:#FBF6EC;border:1px solid #DDCDB0;border-left:4px solid #0C8150}
+.light .big-num{color:#0C8150}.light .payoff p{color:#4a3f37}
+.light details{background:#FBF6EC;border:1px solid #DDCDB0}
+.light summary{color:#4A211D}.light summary::after{color:#0C8150}
+.light details .a{color:#4a3f37}
+
+/* imagens */
+.mod img.cover{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;display:block;border-bottom:1px solid var(--line)}
+.mockup img{width:100%;max-width:640px;height:auto;display:block;margin:0 auto;filter:drop-shadow(0 26px 50px rgba(0,0,0,.55))}
+.ebook-card .mk img{width:100%;max-width:420px;height:auto;display:block;filter:drop-shadow(0 22px 44px rgba(0,0,0,.5))}
+footer{background:#000;color:#7d7264;text-align:center;padding:42px 22px;font-family:var(--sans);font-size:.8rem;line-height:1.7}
+footer b{color:#b6a894}
+
+@media(max-width:900px){.probs,.feat{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:860px){
+  .hero .grid{grid-template-columns:1fr}
+  .hphoto{order:-1;max-height:440px;aspect-ratio:auto}
+  .mgrid,.ebook-card,.who,.alist,.pq,.cmp{grid-template-columns:1fr}
+  .guar{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .bio{grid-template-columns:1fr}.bio .photo{max-width:320px;margin:0 auto}
+}
+@media(max-width:480px){.feat,.probs{grid-template-columns:1fr}.micro span{padding:2px 12px}.vt .row{flex-direction:column;gap:2px}.vt .row span:last-child{align-self:flex-start}}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero glow">
+  <div class="wrap grid">
+    <div>
+      <span class="hbadge">Visagismo Masculino · Método Marcos Targino</span>
+      <h1>Pare de cortar cabelo. Comece a <em>esculpir identidades.</em></h1>
+      <p class="sub">O método de visagismo que transforma o barbeiro técnico em <strong>consultor de imagem</strong> — e faz o cliente pagar pelo valor, não pelo preço.</p>
+      <a href="#oferta" class="btn big">QUERO ME TORNAR UM BARBEIRO-VISAGISTA<span class="s">Acesso imediato · 8 módulos + ebooks + IA</span></a>
+      <div class="micro"><span><b>8</b> módulos</span><span><b>8</b> ebooks</span><span><b>IA</b> 24h</span></div>
+    </div>
+    <div class="hphoto"><img src="img/hero.webp" alt="Marcos Targino — visagismo masculino" width="900" height="1350" fetchpriority="high" decoding="async"></div>
+  </div>
+</header>
+
+<!-- MARQUEE -->
+<div class="marq"><div class="track"><span>Visagismo Masculino</span><span>Método</span><span>Consultor de Imagem</span><span>Autoridade</span><span>8 Módulos + Ebooks</span><span>IA de Suporte 24h</span><span>Visagismo Masculino</span><span>Método</span><span>Consultor de Imagem</span><span>Autoridade</span><span>8 Módulos + Ebooks</span><span>IA de Suporte 24h</span></div></div>
+
+<!-- PAIN BAND -->
+<section class="sec blood band"><div class="wrap"><p>“Corta o de sempre.” Quantas vezes você abaixou a cabeça, ligou a máquina e <b>engoliu o seu potencial?</b></p></div></section>
+
+<!-- PAIN QUOTES -->
+<section class="sec blk">
+  <div class="wrap">
+    <div class="shead center"><span class="kick">Talvez você já tenha sentido isso</span><h2>Se alguma dessas frases soa familiar…</h2><hr class="rule"></div>
+    <div class="pq">
+      <div class="pqi">“Faço um corte impecável, mas o cliente <b>some atrás de R$10 mais barato</b> na esquina.”</div>
+      <div class="pqi">“Sei que poderia fazer muito mais por aquele rosto, mas <b>só executo o que ele pede</b>.”</div>
+      <div class="pqi">“Tenho talento de sobra, mas <b>me tratam como mais um cortador de cabelo</b>.”</div>
+      <div class="pqi">“Queria cobrar mais, mas <b>não sei como justificar</b> o valor sem perder o cliente.”</div>
+      <div class="pqi">“Trabalho o dia inteiro e, no fim do mês, <b>o faturamento não reflete meu esforço</b>.”</div>
+      <div class="pqi">“Vejo colegas com agenda lotada cobrando o triplo e penso: <b>o que eles têm que eu não tenho?</b>”</div>
+    </div>
+    <p class="pq-note">Se você se identificou com pelo menos uma, você está no lugar certo.</p>
+  </div>
+</section>
+
+<!-- PROBLEM REFRAME -->
+<section class="sec blood">
+  <div class="wrap">
+    <div class="shead center"><span class="kick">Entenda o que está acontecendo</span><h2>O problema não é a sua técnica. É que ninguém te deu o método.</h2><hr class="rule"></div>
+    <div class="probs">
+      <div class="prob"><div class="n">01</div><p>Você executa o pedido do cliente <strong>sem antes ler o rosto</strong> e entender o que aquela imagem precisa comunicar.</p></div>
+      <div class="prob"><div class="n">02</div><p>Você sugere no “achismo”. Sem método, fica difícil <strong>justificar</strong> uma proposta — e mais difícil cobrar por ela.</p></div>
+      <div class="prob"><div class="n">03</div><p>Você entrega um bom corte, mas <strong>não entrega uma experiência</strong>. E experiência é o que fideliza e valoriza.</p></div>
+      <div class="prob"><div class="n">04</div><p>Você compete por preço porque está na <strong>mesma categoria</strong> de todo mundo — em vez de criar a sua própria.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MECHANISM -->
+<section class="sec light">
+  <div class="wrap">
+    <div class="shead">
+      <span class="kick">A verdade que ninguém te conta</span>
+      <h2>A diferença entre cobrar R$40 e R$150 não está na sua tesoura.</h2>
+      <hr class="rule">
+      <p class="lead">Não é a máquina de última geração. Não é a decoração. É uma palavra: <strong>valor</strong>. O barbeiro comum <em>apara fios</em>. O barbeiro-visagista <em>constrói identidades</em> — e o cliente não troca isso por R$10 de diferença. Ele vira fiel. Vira embaixador. Enche a sua agenda.</p>
+      <p class="lead" style="margin-top:14px">O visagismo é a ponte entre a técnica que você já domina e a autoridade que ainda não te pagaram para ter. <strong>É isso que você vai instalar na sua cadeira.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section class="sec blood">
+  <div class="wrap">
+    <div class="shead center"><span class="kick">Como funciona o acesso</span><h2>Um programa completo, na palma da sua mão</h2><hr class="rule">
+      <p class="lead">Tudo em uma área de membros premium — bonita, intuitiva e feita para você aprender sem fricção, do celular ou do computador.</p></div>
+    <div class="feat">
+      <div class="fcard"><div class="ic">▶</div><h3>8 módulos em vídeo</h3><p>Aulas diretas, de mentor para aluno, do fundamento à autoridade.</p></div>
+      <div class="fcard"><div class="ic">❦</div><h3>8 ebooks de apoio</h3><p>Leitura com diagramas, tabelas e exercícios práticos.</p></div>
+      <div class="fcard"><div class="ic">✦</div><h3>Assistente com IA</h3><p>Uma inteligência artificial treinada no curso tira dúvidas <strong>24h por dia</strong>.</p></div>
+      <div class="fcard"><div class="ic">◆</div><h3>Área intuitiva</h3><p>Navegação simples e personalizada. Assista de onde parou, quando quiser.</p></div>
+    </div>
+    <div class="mockup"><img src="img/mockup-membros.webp" alt="Área de membros do curso em um notebook" width="900" height="900" loading="lazy" decoding="async"></div>
+    <div class="platform">Acesso pela <b>Hubla</b> — uma das plataformas mais seguras e completas do mercado.</div>
+  </div>
+</section>
+
+<!-- MODULES -->
+<section class="sec blk">
+  <div class="wrap">
+    <div class="shead center"><span class="kick">O conteúdo</span><h2>Os 8 módulos da transformação</h2><hr class="rule">
+      <p class="lead">Uma jornada em ordem lógica — do “porquê” ao “como” — que constrói o barbeiro-visagista passo a passo.</p></div>
+    <div class="mgrid">
+      <div class="mod"><img class="cover" src="img/aula-1.webp" alt="Módulo 01" width="800" height="450" loading="lazy" decoding="async"><div class="body"><span class="num">Módulo 01</span><h3>A Revolução do Visagismo</h3><p>A virada de chave: você deixa de vender corte e passa a entregar identidade — e a cobrar por isso.</p></div></div>
+      <div class="mod"><img class="cover" src="img/aula-2.webp" alt="Módulo 02" width="800" height="450" loading="lazy" decoding="async"><div class="body"><span class="num">Módulo 02</span><h3>Os Fundamentos</h3><p>Os três pilares que transformam “achismo” em método: linguagem visual, psicologia e temperamentos.</p></div></div>
+      <div class="mod"><img class="cover" src="img/aula-3.webp" alt="Módulo 03" width="800" height="450" loading="lazy" decoding="async"><div class="body"><span class="num">Módulo 03</span><h3>Decifrando o Rosto</h3><p>Torne-se um detetive visual: leia formatos, linhas e proporções antes de tocar na tesoura.</p></div></div>
+      <div class="mod"><img class="cover" src="img/aula-4.webp" alt="Módulo 04" width="800" height="450" loading="lazy" decoding="async"><div class="body"><span class="num">Módulo 04</span><h3>Os Quatro Temperamentos</h3><p>Descubra a personalidade do cliente e qual corte não só cabe no rosto, mas veste a alma dele.</p></div></div>
+      <div class="mod"><img class="cover" src="img/aula-5.webp" alt="Módulo 05" width="800" height="450" loading="lazy" decoding="async"><div class="body"><span class="num">Módulo 05</span><h3>A Consulta Visagista</h3><p>O roteiro de 6 passos que eleva você de executor a consultor e faz o cliente dizer “sim” antes do corte.</p></div></div>
+      <div class="mod"><img class="cover" src="img/aula-6.webp" alt="Módulo 06" width="800" height="450" loading="lazy" decoding="async"><div class="body"><span class="num">Módulo 06</span><h3>A Técnica a Serviço da Arte</h3><p>Harmonização, o degradê como luz e sombra e os acabamentos que fecham a imagem com intenção.</p></div></div>
+      <div class="mod"><img class="cover" src="img/aula-7.webp" alt="Módulo 07" width="800" height="450" loading="lazy" decoding="async"><div class="body"><span class="num">Módulo 07</span><h3>Desenvolvendo seu Olhar</h3><p>A prática deliberada que transforma o conhecimento em reflexo — do observador ao aplicador.</p></div></div>
+      <div class="mod"><img class="cover" src="img/aula-8.webp" alt="Módulo 08" width="800" height="450" loading="lazy" decoding="async"><div class="body"><span class="num">Módulo 08</span><h3>Construindo sua Autoridade</h3><p>Como comunicar seu valor, precificar sua expertise e virar a referência que seus clientes procuram.</p></div></div>
+    </div>
+    <div class="ebook-card">
+      <div class="txt"><span class="kick">Material complementar</span><h3>8 ebooks que aprofundam cada aula</h3>
+        <p>Cada módulo em vídeo vem com um ebook de apoio — diagramado com padrão editorial premium, cheio de <strong>diagramas, tabelas de referência e exercícios práticos</strong> para consultar na cadeira, no dia a dia.</p>
+        <p>É a teoria virando ferramenta de trabalho: revise antes de um atendimento, treine o olhar e fixe o método para sempre.</p></div>
+      <div class="mk"><img src="img/mockup-ebooks.webp" alt="Os 8 ebooks de apoio do curso" width="900" height="900" loading="lazy" decoding="async"></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="sec light">
+  <div class="wrap">
+    <div class="shead center"><span class="kick">Para quem é</span><h2>Se você trabalha na cadeira, este método é para você</h2><hr class="rule"></div>
+    <div class="who">
+      <div class="wcard"><div class="tag">Iniciante</div><h3>Está começando</h3><p>Você pula anos de tentativa e erro. Aprende cedo a enxergar o cliente por inteiro — e já se posiciona diferente da concorrência.</p></div>
+      <div class="wcard"><div class="tag">Intermediário</div><h3>Já tem técnica</h3><p>Você tem mão boa, mas briga por preço. O visagismo dá o método que faltava para justificar seu valor e fidelizar de verdade.</p></div>
+      <div class="wcard"><div class="tag">Experiente</div><h3>É referência local</h3><p>Você domina a tesoura e quer subir de patamar. Aqui você vira consultor de imagem e cria uma categoria própria, sem concorrência de preço.</p></div>
+    </div>
+    <div class="noexp">Não é preciso experiência prévia em visagismo. <b>Se você sabe cortar, você está pronto para começar.</b> O método parte do zero e evolui com você.</div>
+  </div>
+</section>
+
+<!-- APPLY -->
+<section class="sec blk">
+  <div class="wrap">
+    <div class="shead center"><span class="kick">Resultado na prática</span><h2>O que você vai aplicar já no próximo cliente</h2><hr class="rule">
+      <p class="lead">Não é teoria de prateleira. É método para usar na cadeira, amanhã de manhã.</p></div>
+    <ul class="alist">
+      <li><span class="ck">✓</span> Ler o formato e as linhas de qualquer rosto em segundos.</li>
+      <li><span class="ck">✓</span> Identificar o temperamento e o que o cliente realmente busca.</li>
+      <li><span class="ck">✓</span> Conduzir uma consulta que impressiona e gera confiança.</li>
+      <li><span class="ck">✓</span> Justificar cada proposta — e ouvir “sim” antes do corte.</li>
+      <li><span class="ck">✓</span> Reposicionar seu serviço e <strong>cobrar pelo valor que entrega</strong>.</li>
+      <li><span class="ck">✓</span> Fidelizar clientes que viram embaixadores da sua marca.</li>
+      <li><span class="ck">✓</span> Criar conteúdo que te posiciona como autoridade nas redes.</li>
+      <li><span class="ck">✓</span> Transformar cada atendimento em uma experiência memorável.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- COST OF INACTION -->
+<section class="sec blood coi">
+  <div class="wrap">
+    <div class="shead center"><span class="kick">O custo de continuar igual</span><h2>Cada semana na mesmice tem um preço</h2><hr class="rule"></div>
+    <div class="stackp">
+      <p>Cada cliente que sai satisfeito, mas <b>sem se lembrar de você</b>, é um embaixador que você perdeu.</p>
+      <p>Cada corte cobrado a preço de mercado é dinheiro <b>que ficou na mesa</b>.</p>
+      <p>Cada mês adiando essa virada é um mês a mais <b>brigando por R$10</b> — quando poderia estar construindo autoridade.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PAYOFF -->
+<section class="sec light payoff">
+  <div class="wrap">
+    <div class="shead"><span class="kick">O retorno</span><h2>Em quanto tempo o curso se paga?</h2><hr class="rule"></div>
+    <div class="box">
+      <div class="big-num">2 atendimentos.</div>
+      <p>Ao reposicionar seu serviço como uma consultoria visagista, um único cliente já paga por um valor muito superior. Se o seu ticket sobe de R$45 para R$170 — totalmente possível quando você entrega identidade, e não só corte — <strong>em dois atendimentos o investimento já voltou.</strong> Tudo o que vier depois é lucro, todos os dias, pelo resto da sua carreira.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VALUE STACK -->
+<section class="sec blood">
+  <div class="wrap">
+    <div class="shead center"><span class="kick">O valor real</span><h2>Quanto custaria construir esse conhecimento sozinho?</h2><hr class="rule">
+      <p class="lead">Fora daqui, dominar o que você vai aprender exigiria anos — e um investimento muito maior.</p></div>
+    <div class="vt">
+      <div class="row"><span>Cursos presenciais de visagismo e imagem</span><span>R$ 1.500+</span></div>
+      <div class="row"><span>Anos de tentativa e erro na sua própria cadeira</span><span>incalculável</span></div>
+      <div class="row"><span>Mentoria para aprender a precificar e se posicionar</span><span>R$ 1.000+</span></div>
+      <div class="row"><span>Material de estudo, tabelas e método organizado</span><span>R$ 500+</span></div>
+      <div class="row total"><span>O método destilado, pronto para aplicar</span><span>Tudo aqui</span></div>
+    </div>
+    <p class="punch">Você recebe o essencial de tudo isso por uma pequena fração — e sem esperar anos para chegar lá.</p>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="sec blk">
+  <div class="wrap">
+    <div class="shead center"><span class="kick">A diferença</span><h2>Quem aplica o método × quem continua no improviso</h2><hr class="rule"></div>
+    <div class="cmp">
+      <div class="cc with"><h3>Com o método</h3>
+        <li><span class="mk">✓</span> Lê o rosto e a personalidade de cada cliente</li>
+        <li><span class="mk">✓</span> Justifica a proposta e cobra pelo valor</li>
+        <li><span class="mk">✓</span> Vira consultor de imagem, referência local</li>
+        <li><span class="mk">✓</span> Agenda cheia de clientes fiéis</li>
+        <li><span class="mk">✓</span> Cria a própria categoria, sem guerra de preço</li>
+        <li><span class="hl">Cobra pelo que entrega</span></li></div>
+      <div class="cc without"><h3>Sem o método</h3>
+        <li><span class="mk">✕</span> Executa “o de sempre” no automático</li>
+        <li><span class="mk">✕</span> Sugere no achismo, sem convicção</li>
+        <li><span class="mk">✕</span> É visto como “mais um cortador”</li>
+        <li><span class="mk">✕</span> Cliente some por R$10 de diferença</li>
+        <li><span class="mk">✕</span> Briga por preço, todo mês</li>
+        <li><span class="hl">Trabalha mais, ganha menos</span></li></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFER -->
+<section class="sec blk" id="oferta">
+  <div class="wrap">
+    <div class="shead center" style="margin-bottom:34px"><span class="kick">Sua matrícula</span><h2>A Cadeira da Transformação</h2></div>
+    <div class="ocard">
+      <div class="top">Acesso completo · condição especial de lançamento</div>
+      <div class="in">
+        <ul class="incl">
+          <li><span class="ck">✓</span> 8 módulos em vídeo (do fundamento à autoridade)</li>
+          <li><span class="ck">✓</span> 8 ebooks de apoio com exercícios práticos</li>
+          <li><span class="ck">✓</span> Assistente com IA para tirar dúvidas 24h</li>
+          <li><span class="ck">✓</span> Área de membros premium na Hubla</li>
+          <li><span class="ck">✓</span> 1 ano de acesso a tudo</li>
+        </ul>
+        <div class="price"><div class="from">De R$ 397,90</div><div class="now"><small>R$</small> 247<small>,90</small></div><div class="inst">ou parcelado no cartão · pagamento único</div></div>
+        <a href="https://pay.hub.la/ZLlGtYvigctpchJK8RJG" class="btn big" style="width:100%" rel="noopener">GARANTIR MINHA VAGA AGORA</a>
+        <div class="trust"><span>🔒 Compra segura</span><span>✓ Acesso imediato</span><span>♥ Garantia de 7 dias</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUARANTEE -->
+<section class="sec blood">
+  <div class="wrap">
+    <div class="guar">
+      <div class="seal"><b>7</b><span>dias</span></div>
+      <div><h3>O risco é meu, não seu.</h3>
+        <p>Entre, assista, aplique. Se em <strong>7 dias</strong> você sentir que não é para você, é só pedir: devolvemos 100% do seu investimento, sem perguntas e sem burocracia. Ou o método transforma a sua cadeira, ou você não paga nada.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BIO -->
+<section class="sec blk">
+  <div class="wrap bio">
+    <div class="photo"><img src="img/bio.webp" alt="Marcos Targino" width="700" height="1049" loading="lazy" decoding="async"></div>
+    <div>
+      <span class="kick">Quem vai te guiar</span>
+      <h2>Marcos Targino</h2>
+      <p>Barbeiro e consultor em visagismo masculino, Marcos viveu na pele a rotina do “corta e acerta a barba” — até descobrir que o visagismo era a peça que faltava para transformar técnica em autoridade.</p>
+      <p>Hoje, ele destila esse método em um programa direto e aplicável, de mentor para aluno, para que você não precise levar anos aprendendo o que ele já organizou para você.</p>
+      <div class="q">“Você não precisa de mais uma técnica de corte. Você precisa de um método para enxergar — e para cobrar pelo que enxerga.”</div>
+    </div>
+  </div>
+</section>
+
+<!-- ACCESS TIME -->
+<section class="sec blood acc">
+  <div class="wrap">
+    <span class="kick">Seu tempo de acesso</span>
+    <div><span class="pill">✦ 1 ano completo de acesso a todo o conteúdo</span></div>
+    <p class="lead" style="max-width:600px;margin:16px auto 0">Estude no seu ritmo e volte quantas vezes quiser para revisar antes dos atendimentos. O método fica com você o ano inteiro.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec light">
+  <div class="wrap">
+    <div class="shead center"><span class="kick">Dúvidas</span><h2>Perguntas frequentes</h2><hr class="rule"></div>
+    <div class="faq">
+      <details open><summary>Preciso ter experiência com visagismo?</summary><div class="a">Não. O método parte do zero e evolui com você. Se você já sabe cortar cabelo, tem tudo o que precisa para começar.</div></details>
+      <details><summary>Como recebo o acesso?</summary><div class="a">Após a compra, seu acesso é liberado na hora, na área de membros da Hubla. Você começa a assistir imediatamente, do celular ou do computador.</div></details>
+      <details><summary>Por quanto tempo tenho acesso?</summary><div class="a">Você tem 1 ano completo de acesso a todos os módulos, ebooks e ao assistente com IA. Estude no seu ritmo e revise sempre que precisar.</div></details>
+      <details><summary>Os ebooks estão inclusos?</summary><div class="a">Sim. São 8 ebooks de apoio, um para cada módulo, com diagramas, tabelas de referência e exercícios práticos para aplicar na cadeira.</div></details>
+      <details><summary>Como funciona o assistente com inteligência artificial?</summary><div class="a">É uma IA treinada no conteúdo do curso, disponível 24 horas por dia. Sempre que tiver uma dúvida sobre o método, é só perguntar e receber a resposta na hora.</div></details>
+      <details><summary>Funciona para autônomo ou barbearia pequena?</summary><div class="a">Sim. O método é sobre percepção e posicionamento — funciona em qualquer estrutura, do autônomo à barbearia consolidada.</div></details>
+      <details><summary>E se eu não gostar?</summary><div class="a">Você tem 7 dias de garantia incondicional. Se não for para você, devolvemos 100% do valor, sem perguntas.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL -->
+<section class="sec glow final">
+  <div class="wrap">
+    <span class="kick">A decisão</span>
+    <h2>A sua cadeira pode continuar sendo um móvel.<br>Ou pode virar o seu palco.</h2>
+    <p>Você já tem o talento nas mãos. O que falta é o método para transformá-lo em autoridade — e em faturamento. Comece hoje.</p>
+    <a href="#oferta" class="btn big">QUERO COMEÇAR MINHA TRANSFORMAÇÃO</a>
+    <div class="sig">— Marcos Targino, Visagismo Masculino</div>
+  </div>
+</section>
+
+<footer>
+  <b>A Cadeira da Transformação</b> · Marcos Targino — Visagismo Masculino<br>
+  © 2026 · Todos os direitos reservados<br>MARCOS GUILHERME LOPES TARGINO · CNPJ 42.109.489/0001-84<br>
+  Este site não faz parte do Google, Facebook ou Instagram. Conteúdo educacional; resultados variam conforme aplicação e empenho de cada profissional.
+</footer>
+
+</body>
+</html>
