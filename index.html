@@ -261,6 +261,23 @@ footer b{color:#b6a894}
 }
 @media(max-width:480px){.feat,.probs{grid-template-columns:1fr}.micro span{padding:2px 12px}.vt .row{flex-direction:column;gap:2px}.vt .row span:last-child{align-self:flex-start}}
 </style>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2079808875950408');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2079808875950408&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -474,7 +491,7 @@ footer b{color:#b6a894}
           <li><span class="ck">✓</span> 1 ano de acesso a tudo</li>
         </ul>
         <div class="price"><div class="from">De R$ 397,90</div><div class="now"><small>R$</small> 247<small>,90</small></div><div class="inst">ou parcelado no cartão · pagamento único</div></div>
-        <a href="https://pay.hub.la/ZLlGtYvigctpchJK8RJG" class="btn big" style="width:100%" rel="noopener">GARANTIR MINHA VAGA AGORA</a>
+        <a href="https://pay.hub.la/ZLlGtYvigctpchJK8RJG" class="btn big" style="width:100%" rel="noopener" onclick="return trackAddToCart(event,this)">GARANTIR MINHA VAGA AGORA</a>
         <div class="trust"><span>🔒 Compra segura</span><span>✓ Acesso imediato</span><span>♥ Garantia de 7 dias</span></div>
       </div>
     </div>
@@ -549,4 +566,23 @@ footer b{color:#b6a894}
 </footer>
 
 </body>
+<script>
+// Dispara AddToCart do Meta Pixel ao clicar no botão da oferta,
+// aguardando o pixel enviar antes de seguir para o checkout externo (Hubla).
+function trackAddToCart(e, el) {
+  var url = el.href;
+  if (typeof fbq === 'function') {
+    e.preventDefault();
+    fbq('track', 'AddToCart', {
+      content_name: 'A Cadeira da Transformação',
+      content_type: 'product',
+      currency: 'BRL',
+      value: 247.90
+    });
+    setTimeout(function () { window.location.href = url; }, 250);
+    return false;
+  }
+  return true;
+}
+</script>
 </html>
