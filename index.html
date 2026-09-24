@@ -240,6 +240,9 @@ details .a{padding:0 22px 20px;font-size:.95rem;color:var(--db)}
 .authority-card::after{content:"";position:absolute;inset:0;pointer-events:none;box-shadow:inset 0 0 0 1px rgba(255,255,255,.025)}
 .authority-card img{width:100%;height:auto;aspect-ratio:789/701;object-fit:cover}
 .authority-proof{display:flex;align-items:center;justify-content:center;gap:10px;margin:28px auto 0;color:var(--brass-soft);font-size:.84rem;font-weight:500;letter-spacing:.03em;text-align:center}
+.cta-row{text-align:center;margin-top:40px}
+.cta-row .btn{min-width:min(100%,420px)}
+.payoff .cta-row{text-align:left;margin-top:30px}
 .authority-proof::before,.authority-proof::after{content:"";width:34px;height:1px;background:rgba(221,187,126,.34)}
 
 /* imagens */
@@ -265,6 +268,7 @@ footer b{color:#b6a894}
   .authority-grid{grid-template-columns:1fr;gap:18px;margin-top:30px}
   .authority-card{border-radius:11px}
   .authority-proof{font-size:.78rem;line-height:1.5}
+  .cta-row{margin-top:28px}
   .ebook-card .txt{padding-bottom:6px}
   .ebook-card .mk{padding:4px 20px 26px}
   .ebook-card .mk img{max-width:100%}
@@ -302,7 +306,7 @@ src="https://www.facebook.com/tr?id=2079808875950408&ev=PageView&noscript=1"
       <span class="hbadge">Visagismo Masculino · Método Marcos Targino</span>
       <h1>Pare de cortar cabelo. Comece a <em>esculpir identidades.</em></h1>
       <p class="sub">O método de visagismo que transforma o barbeiro técnico em <strong>consultor de imagem</strong> — e faz o cliente pagar pelo valor, não pelo preço.</p>
-      <a href="https://pay.hub.la/ZLlGtYvigctpchJK8RJG" class="btn big">QUERO ME TORNAR UM BARBEIRO-VISAGISTA</a>
+      <a href="#oferta" class="btn big">QUERO ME TORNAR UM BARBEIRO-VISAGISTA</a>
       <ul class="micro"><li><b>8 módulos</b> de conteúdo estratégico</li><li><b>8 ebooks</b> de materiais complementares</li><li><b>Inteligência artificial 24h</b> para te ajudar</li></ul>
     </div>
     <div class="hphoto"><img src="img/hero.webp" alt="Marcos Targino — visagismo masculino" width="900" height="1350" fetchpriority="high" decoding="async"></div>
@@ -358,7 +362,7 @@ src="https://www.facebook.com/tr?id=2079808875950408&ev=PageView&noscript=1"
 </section>
 
 <!-- AUTHORITY / PORTFOLIO -->
-<section class="sec blk" id="authority">
+<section class="sec blk authority" id="authority">
   <div class="wrap">
     <div class="intro">
       <span class="kick">Autoridade construída na prática</span>
@@ -374,8 +378,8 @@ src="https://www.facebook.com/tr?id=2079808875950408&ev=PageView&noscript=1"
         <img src="img/Prova social 02.webp" alt="Portfólio de cortes, estilos e consultorias de imagem de Marcos Targino" width="789" height="703" loading="lazy" decoding="async">
       </figure>
     </div>
-        <a href="https://pay.hub.la/ZLlGtYvigctpchJK8RJG" class="btn big">QUERO COMEÇAR AGORA</a>
     <p class="authority-proof">Repertório autoral desenvolvido ao longo da trajetória profissional de Marcos</p>
+    <div class="cta-row"><a href="#oferta" class="btn big">QUERO COMEÇAR AGORA</a></div>
   </div>
 </section>
 
@@ -416,6 +420,7 @@ src="https://www.facebook.com/tr?id=2079808875950408&ev=PageView&noscript=1"
         <p>É a teoria virando ferramenta de trabalho: revise antes de um atendimento, treine o olhar e fixe o método para sempre.</p></div>
       <div class="mk"><img src="img/mockup-ebooks.webp" alt="Os 8 ebooks de apoio do curso" width="900" height="465" loading="lazy" decoding="async"></div>
     </div>
+    <div class="cta-row"><a href="#oferta" class="btn big">QUERO ACESSAR OS 8 MÓDULOS</a></div>
   </div>
 </section>
 
@@ -470,6 +475,7 @@ src="https://www.facebook.com/tr?id=2079808875950408&ev=PageView&noscript=1"
       <div class="big-num">2 atendimentos.</div>
       <p>Ao reposicionar seu serviço como uma consultoria visagista, um único cliente já paga por um valor muito superior. Se o seu ticket sobe de R$45 para R$170 — totalmente possível quando você entrega identidade, e não só corte — <strong>em dois atendimentos o investimento já voltou.</strong> Tudo o que vier depois é lucro, todos os dias, pelo resto da sua carreira.</p>
     </div>
+    <div class="cta-row"><a href="#oferta" class="btn big">QUERO QUE O CURSO SE PAGUE</a></div>
   </div>
 </section>
 
@@ -613,7 +619,7 @@ function trackAddToCart(e, el) {
       content_name: 'A Cadeira da Transformação',
       content_type: 'product',
       currency: 'BRL',
-      value: 247.90
+      value: 147.90
     });
     setTimeout(function () { window.location.href = url; }, 250);
     return false;
